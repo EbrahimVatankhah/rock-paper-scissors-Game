@@ -30,9 +30,12 @@ initGame();
 
 rock.addEventListener('click', function() {
     if (pcAnswer == 'rock') {
-        result.innerHTML = `YOU WON 👊 `;
-    } else {
-        result.innerHTML = 'YOU LOOSE';
+        result.innerHTML = 'DRAW  👊';
+    } else if(pcAnswer == 'scissors') {
+        result.innerHTML = 'YOU WIN ✌️';
+    }
+    else if(pcAnswer == 'paper'){
+        result.innerHTML = 'YOU LOOSE ✋';
     }
     setTimeout(initGame, 500); 
 });
@@ -40,18 +43,24 @@ rock.addEventListener('click', function() {
 
 paper.addEventListener('click', function() {
     if (pcAnswer == 'paper') {
-        result.innerHTML = `YOU WON ✋ `;
-    } else {
-        result.innerHTML = 'YOU LOOSE';
+        result.innerHTML = 'DRAW ✋ ';
+    } else if(pcAnswer == 'scissors') {
+        result.innerHTML = 'YOU LOOSE ✌️ ';
+    }
+    else if(pcAnswer == 'rock'){
+        result.innerHTML = 'YOU WIN 👊';
     }
     setTimeout(initGame, 500); 
 });
 
 scissors.addEventListener('click', function() {
     if (pcAnswer == 'scissors') {
-        result.innerHTML = `YOU WON ✌️ `;
-    } else {
-        result.innerHTML = 'YOU LOOSE';
+        result.innerHTML ='DRAW ✌️ ' ;
+    } else if(pcAnswer == 'rock') {
+        result.innerHTML = 'YOU LOOSE 👊 ';
+    }
+    else if(pcAnswer == 'paper'){
+        result.innerHTML = 'YOU WIN ✋ ';
     }
     setTimeout(initGame, 500);
 });
